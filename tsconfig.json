@@ -1,0 +1,19 @@
+{
+    "include": ["src/*.ts", "src/modules/*.d.ts"],
+    "exclude": [ "src/modules/*(!.d).ts" ],
+    "compilerOptions": {
+        "outDir": "build",
+        "target": "es5",
+        "module": "none",
+        "declaration": true,
+        "declarationDir": "build/types",
+        "noImplicitAny": false,
+        "noResolve": false,
+        "removeComments": false,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "diagnostics": true,
+        "pretty": true,
+        "alwaysStrict": true
+    }
+}

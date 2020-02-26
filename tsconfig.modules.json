@@ -1,0 +1,19 @@
+{
+    "include": ["src/modules/*.ts"],
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "declaration": true,
+        "declarationDir": "src/modules/generated-types",
+        "declarationMap": true, // necessary to provide seamless source code navigation
+        "noImplicitAny": false,
+        "noResolve": false,
+        "removeComments": false,
+        "experimentalDecorators": true,
+        "outDir": "build",
+        "sourceMap": true,
+        "diagnostics": true,
+        "pretty": true,
+        "alwaysStrict": true,
+    }
+}

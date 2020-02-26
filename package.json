@@ -1,0 +1,23 @@
+{
+  "name": "modules-in-ts-namespaces",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "kuzhelov",
+  "devDependencies": {
+    "copyfiles": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "serve": "^11.3.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "build": "tsc && copyfiles -f build/*.js public/",
+    "build-modules": "webpack --config webpack.modules.config.js",
+    "serve": "serve public",
+    "clean": "rimraf ./build && rimraf ./src/modules/generated-types && rimraf ./public/*.js",
+    "start": "yarn clean && yarn build-modules && yarn build && yarn serve"
+  }
+}
